@@ -1,2 +1,2 @@
 # MIRA-Image-Registration-
-Inhale-Exhale Lung CT Registration on DIR-Lab COPD
+This project evaluates inhale-exhale lung 4DCT registration on the DIR-Lab COPD dataset, combining border artifact removal, intensity normalization, CLAHE, and lungmask segmentation with a two-stage (affine + multi-resolution B-spline) Elastix registration pipeline. We also tested an instance-specific deep learning refinement step (VxmLite), achieving a mean TRE of 1.748 mm across the four main COPD cases and 1.623 mm overall when including copd7 and copd10.
