@@ -1,0 +1,57 @@
+
+(FixedInternalImagePixelType "float")
+(FixedImageDimension 3)
+(MovingInternalImagePixelType "float")
+(MovingImageDimension 3)
+
+(Registration "MultiResolutionRegistration")
+(FixedImagePyramid "FixedRecursiveImagePyramid")
+(MovingImagePyramid "MovingRecursiveImagePyramid")
+(Interpolator "BSplineInterpolator")
+(Metric "AdvancedMattesMutualInformation")
+(Optimizer "AdaptiveStochasticGradientDescent")
+(ResampleInterpolator "FinalBSplineInterpolator")
+(Resampler "DefaultResampler")
+(Transform "BSplineTransform")
+
+(NumberOfResolutions 4)
+(ImagePyramidSchedule 8 8 8 4 4 4 2 2 2 1 1 1)
+
+(FinalGridSpacingInPhysicalUnits 20.0 20.0 20.0)
+
+(GridSpacingSchedule 8.0 4.0 2.0 1.0)
+(HowToCombineTransforms "Compose")
+
+(MaximumNumberOfIterations 1200)
+
+(AutomaticParameterEstimation "true")
+(UseAdaptiveStepSizes "true")
+
+(SP_a 50.0)
+
+(NumberOfHistogramBins 32)
+
+(WriteTransformParametersEachIteration "false")
+(WriteTransformParametersEachResolution "false")
+(WriteResultImageAfterEachResolution "false")
+(WritePyramidImagesAfterEachResolution "false")
+(WriteResultImage "false")
+(ResultImageFormat "nii.gz")
+(ShowExactMetricValue "false")
+(ErodeMask "false")
+(UseDirectionCosines "true")
+(ResultImagePixelType "float")
+
+
+(ImageSampler "RandomCoordinate")
+(NumberOfSpatialSamples 5000)
+(NewSamplesEveryIteration "true")
+(UseRandomSampleRegion "false")
+
+(SampleRegionSize 50.0 50.0 50.0)
+(MaximumNumberOfSamplingAttempts 20)
+
+
+(BSplineInterpolationOrder 1)
+(FinalBSplineInterpolationOrder 3)
+(DefaultPixelValue -1000)
